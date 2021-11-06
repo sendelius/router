@@ -1,6 +1,7 @@
 {
   "name": "sendelius/router",
   "type": "library",
+  "license": "MIT",
   "authors": [
     {
       "name": "Sendelius",
