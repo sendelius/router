@@ -1,0 +1,19 @@
+{
+  "name": "sendelius/router",
+  "type": "library",
+  "authors": [
+    {
+      "name": "Sendelius",
+      "email": "sendelius@gmail.com",
+      "homepage": "https://sendelius.ru"
+    }
+  ],
+  "require": {
+    "php": ">=7.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "SendeliusRouter\\": "src/"
+    }
+  }
+}
