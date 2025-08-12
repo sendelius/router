@@ -4,43 +4,43 @@ namespace Sendelius\Router;
 
 class Result {
 	/**
-	 * контроллер
+	 * Контроллер
 	 * @var string
 	 */
 	public string $controller = '';
 
 	/**
-	 * метод
+	 * Метод
 	 * @var string
 	 */
 	public string $method = '';
 
 	/**
-	 * плагин
+	 * Плагин
 	 * @var string
 	 */
 	public string $plugin = '';
 
 	/**
-	 * путь
+	 * Путь
 	 * @var string
 	 */
 	public string $path = '';
 
 	/**
-	 * линк на папку со стилями и скриптами
+	 * Ссылка на папку со стилями и скриптами
 	 * @var string
 	 */
 	public string $assets = '';
 
 	/**
-	 * поддиректория контроллера
+	 * Поддиректория контроллера
 	 * @var string
 	 */
 	public string $subPath = '';
 
 	/**
-	 * правило роутера
+	 * Правило роутера
 	 * @var Rule|null
 	 */
 	public ?Rule $rule = null;

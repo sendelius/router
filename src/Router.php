@@ -4,19 +4,19 @@ namespace Sendelius\Router;
 
 class Router {
 	/**
-	 * экземпляр класса результатов
+	 * Экземпляр класса результатов
 	 * @var Result
 	 */
 	public Result $result;
 
 	/**
-	 * экземпляр класса запросов
+	 * Экземпляр класса запросов
 	 * @var Request
 	 */
 	public Request $request;
 
 	/**
-	 * массив правил
+	 * Массив правил
 	 * @var array
 	 */
 	private array $rules = [];
@@ -30,7 +30,7 @@ class Router {
 	}
 
 	/**
-	 * назначение правила
+	 * Назначение правила
 	 * @param string|array $path
 	 * @return Rule
 	 */
@@ -46,7 +46,7 @@ class Router {
 	}
 
 	/**
-	 * запуск роутера
+	 * Запуск роутера
 	 */
 	public function start(): void {
 		foreach ($this->rules as $url => $rule) {
@@ -105,7 +105,7 @@ class Router {
 				if (strlen((string)$rule->data['plugin'])) $this->result->plugin = $rule->data['plugin'];
 				if (strlen((string)$rule->data['subPath'])) $this->result->subPath = $rule->data['subPath'];
 				if ($rule->data['assets'] and isset($this->request->query['route']['file'])) {
-					$assetsFile = $rule->data['assets'] . str_replace(['\\', '/'], DS, $this->request->query['route']['file']);
+					$assetsFile = $rule->data['assets'] . str_replace(['\\', '/'], DIRECTORY_SEPARATOR, $this->request->query['route']['file']);
 					if (file_exists($assetsFile) and is_file($assetsFile)) $this->result->assets = $assetsFile;
 					else $setRule = false;
 				}

@@ -4,43 +4,43 @@ namespace Sendelius\Router;
 
 class Request {
 	/**
-	 * url запроса
+	 * Url запроса
 	 * @var string
 	 */
 	public string $url;
 
 	/**
-	 * метод запроса
+	 * Метод запроса
 	 * @var string
 	 */
 	public string $method;
 
 	/**
-	 * ip адрес сервера
+	 * Ip адрес сервера
 	 * @var string
 	 */
 	public string $serverIp;
 
 	/**
-	 * ip адрес пользователя
+	 * Ip адрес пользователя
 	 * @var string
 	 */
 	public string $userIp;
 
 	/**
-	 * хост
+	 * Хост
 	 * @var string
 	 */
 	public string $host;
 
 	/**
-	 * протокол запроса
+	 * Протокол запроса
 	 * @var string
 	 */
 	public string $protocol;
 
 	/**
-	 * массив параметров запроса
+	 * Массив параметров запроса
 	 * @var array
 	 */
 	public array $query = [
@@ -51,7 +51,7 @@ class Request {
 	];
 
 	/**
-	 * конструктор класса
+	 * Конструктор класса
 	 */
 	function __construct() {
 		$uri = (array_key_exists('REQUEST_URI', $_SERVER)) ? parse_url($_SERVER['REQUEST_URI']) : '';
@@ -75,7 +75,7 @@ class Request {
 	}
 
 	/**
-	 * получение параметра запроса
+	 * Получение параметра запроса
 	 * @param string $key
 	 * @return mixed|null
 	 */
@@ -85,7 +85,7 @@ class Request {
 	}
 
 	/**
-	 * получение данных из тела запроса
+	 * Получение данных из тела запроса
 	 * @param string $key
 	 * @return mixed
 	 */
@@ -95,7 +95,7 @@ class Request {
 	}
 
 	/**
-	 * получение данных из переданного json
+	 * Получение данных из переданного json
 	 * @param string $key
 	 * @return mixed
 	 */
@@ -105,7 +105,7 @@ class Request {
 	}
 
 	/**
-	 * получение данных из url чпу
+	 * Получение данных из url чпу
 	 * @param string $key
 	 * @return mixed
 	 */

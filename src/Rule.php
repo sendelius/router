@@ -4,7 +4,7 @@ namespace Sendelius\Router;
 
 class Rule {
 	/**
-	 * массив с данными для правила
+	 * Массив с данными для правила
 	 * @var array
 	 */
 	public array $data = [
@@ -17,7 +17,7 @@ class Rule {
 	];
 
 	/**
-	 * назначение контроллера
+	 * Назначение контроллера
 	 * @param string $name
 	 * @return $this
 	 */
@@ -27,7 +27,7 @@ class Rule {
 	}
 
 	/**
-	 * назначение поддиректории контроллера
+	 * Назначение поддиректории контроллера
 	 * @param string $path
 	 * @return $this
 	 */
@@ -37,7 +37,7 @@ class Rule {
 	}
 
 	/**
-	 * назначение метода
+	 * Назначение метода
 	 * @param string $name
 	 * @return $this
 	 */
@@ -47,7 +47,7 @@ class Rule {
 	}
 
 	/**
-	 * назначение линка на папку со стилями и скриптами
+	 * Назначение линка на папку со стилями и скриптами
 	 * @param string $dir
 	 * @return $this
 	 */
@@ -57,7 +57,7 @@ class Rule {
 	}
 
 	/**
-	 * назначение плагина
+	 * Назначение плагина
 	 * @param string $name
 	 * @return $this
 	 */
@@ -67,7 +67,7 @@ class Rule {
 	}
 
 	/**
-	 * назначение атрибутов
+	 * Назначение атрибутов
 	 * @param string $key
 	 * @param mixed $val
 	 * @return $this
